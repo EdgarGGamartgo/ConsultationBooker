@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 
-const DynamicLogInTemplate = dynamic(() => import("../templates/LogInTemplate"), {
+const DynamicLogInTemplate = dynamic(() => import("../templates/AccessTemplate"), {
   ssr: false,
 });
 
@@ -11,6 +11,7 @@ export default function SignUp() {
     actionBtn: 'Entrar',
     optionLabel: '¿Olvidaste tu contraseña?',
     alternativeOptionLabel: '¿No te registraste? Click aquí.',
+    isLogInPage: true
   }
   
   return (

@@ -1,3 +1,2 @@
-export * from './LogInTemplate';
-export * from './SignUpTemplate';
+export * from './AccessTemplate';
 

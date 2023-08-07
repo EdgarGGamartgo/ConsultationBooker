@@ -1,15 +1,16 @@
 "use client";
 // import Image from 'next/image';
 import { useEffect } from "react";
-import { SignUpProps } from "../interfaces";
+import { LogInProps } from "../interfaces";
 // import consultationPic from '../../public/images/consultation.jpg';
 
-export default function SignUpTemplate({ 
+export default function AccessTemplate({ 
   title, 
   actionBtn,
   optionLabel,
-  alternativeOptionLabel
-}: SignUpProps) {
+  alternativeOptionLabel,
+  isLogInPage
+}: LogInProps) {
   useEffect(() => {
     const init = async () => {
       const { Ripple, Input, initTE } = await import("tw-elements");
@@ -39,7 +40,7 @@ export default function SignUpTemplate({
                     alt="logo"
                   /> */}
                   <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold">
-                    {title}
+                    { title }
                   </h4>
                 </div>
 
@@ -81,23 +82,26 @@ export default function SignUpTemplate({
                       data-te-ripple-init
                       data-te-ripple-color="light"
                       >
-                        {actionBtn}
+                        { actionBtn }
                     </button>
 
                     {/* <!--Forgot password link--> */}
-                    {/* <a href="#!">Forgot password?</a> */}
+                    {
+                      isLogInPage && <a href="#!">
+                        { optionLabel }
+                      </a>
+                    }
                   </div>
 
                   {/* <!--Register button--> */}
                   <div className="flex flex-col items-center justify-between pb-6">
-                    {/* <p className="mb-0 mr-2">Don&apos;t have an account?</p> */}
+                    <p className="mb-0 mr-2"></p>
                     <button
                       type="button"
                       className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                       data-te-ripple-init
                       data-te-ripple-color="light">
-                      {/* Register */}
-                      {alternativeOptionLabel}
+                      { alternativeOptionLabel }
                     </button>
                   </div>
                 </form>
