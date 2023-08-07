@@ -14,9 +14,9 @@ export function LogoAtom({
             src={consultationPic}
             alt="logo"
             /> */}
-            <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold">
+            <h3 className="mb-12 mt-1 pb-1 text-xl font-semibold">
                 { title }
-            </h4>
+            </h3>
         </div>
     )
 }

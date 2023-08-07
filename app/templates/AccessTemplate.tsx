@@ -19,7 +19,7 @@ export default function AccessTemplate({
   }, []);
   
   return (
-    <section className="w-full block rounded-lg bg-white shadow-lg dark:bg-neutral-800 g-0 lg:flex lg:flex-wrap gradient-form h-[100vh] bg-neutral-200 dark:bg-neutral-700 p-10 g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
+    <section className="w-full block rounded-lg bg-white shadow-lg dark:bg-neutral-800 g-0 lg:flex lg:flex-wrap gradient-form h-[100vh] bg-neutral-200 dark:bg-neutral-700 p-10 g-6 flex flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
       <div className="w-full block rounded-lg bg-white shadow-lg dark:bg-neutral-800 g-0 lg:flex lg:flex-wrap">
         <LeftAccessContainerOrganism
           title={title}
